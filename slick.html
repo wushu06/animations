@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>New Age - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/new-age.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <style>
+
+
+
+        .content-width {
+            width: 80%;
+            height: 100vh;
+            margin: 0 auto;
+        }
+
+        .slideshow {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .slideshow-items {
+            position: relative;
+            width: 100%;
+            height: 300px;
+        }
+
+        .item {
+           /* position: absolute;*/
+            width: 100%;
+            height: auto;
+        }
+
+        .item-image-container {
+            position: relative;
+            width: 42%;
+        }
+
+        .item-image-container::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 101%;
+            height: 101%;
+          background: #22222A;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        .item-image {
+            position: relative;
+            width: 100%;
+            height: auto;
+            /*opacity: 0;*/
+            display: block;
+            transition: opacity .3s ease-out .45s;
+        }
+
+        .item.active .item-image {
+            opacity: 1;
+        }
+
+        .item.active .item-image-container::before {
+            opacity: .8;
+        }
+
+        .item-description {
+            position: absolute;
+            top: 182px;
+            right: 0;
+            width: 50%;
+            padding-right: 4%;
+            line-height: 1.8;
+        }
+
+        .item-header {
+            position: absolute;
+            top: 150px;
+            left: -1.8%;
+            z-index: 100;
+        }
+
+        .item-header .vertical-part {
+            margin: 0 -4px;
+            font-family: 'Montserrat', sans-serif;
+            -webkit-font-smoothing: auto;
+            font-size: 7vw;
+            color: #fff;
+        }
+
+        .vertical-part {
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .vertical-part b {
+            display: inline-block;
+          transform: translateY(100%);
+        }
+
+        .item-header .vertical-part b {
+            transition: .5s;
+        }
+
+        .item-description .vertical-part b {
+            transition: .21s;
+        }
+
+        .item.active .item-header .vertical-part b {
+            transform: translateY(0);
+        }
+
+        .item.active .item-description .vertical-part b {
+            transform: translateY(0);
+        }
+
+        .controls {
+            position: relative;
+            text-align: right;
+            z-index: 1000;
+        }
+
+        .controls ul {
+            list-style: none;
+        }
+
+        .controls ul li {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 3px;
+            background:#bdbdd5;;
+            cursor: pointer;
+        }
+
+        .controls ul li.active {
+            background:#6a6a77;;
+        }
+    </style>
+
+</head>
+
+<body id="page-top" style="background-color: #ccc; ">
+<div id="barba-wrapper">
+    <div class="barba-container">
+
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/barba/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/barba/page2.html">Page 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="/barba/page3.html">Page 3</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <div class="content-width" style="max-width: 900px; margin: auto; overflow: hidden;">
+            <div class="slideshow">
+                <!-- Slideshow Items -->
+                <div class="slideshow-items">
+                    <div class="item">
+                        <div class="item-image-container"><img class="item-image" src="https://i.pinimg.com/564x/23/a4/86/23a4860b8b70b1eb27f2791b97aaee8e.jpg"></div><!-- Staggered Header Elements -->
+                        <div class="item-header">
+                            <span class="vertical-part"><b>N</b></span> <span class="vertical-part"><b>i</b></span> <span class="vertical-part"><b>k</b></span> <span class="vertical-part"><b>e</b></span>
+                        </div><!-- Staggered Description Elements -->
+                        <div class="item-description">
+                            <span class="vertical-part"><b>Nike</b></span> <span class="vertical-part"><b>ipsum</b></span> <span class="vertical-part"><b>dolor</b></span> <span class="vertical-part"><b>sit</b></span> <span class="vertical-part"><b>amet,</b></span> <span class="vertical-part"><b>consectetur</b></span> <span class="vertical-part"><b>adipiscing</b></span> <span class="vertical-part"><b>elit.</b></span> <span class="vertical-part"><b>Pellentesque</b></span> <span class="vertical-part"><b>elementum</b></span> <span class="vertical-part"><b>gravida</b></span> <span class="vertical-part"><b>ex</b></span> <span class="vertical-part"><b>at</b></span> <span class="vertical-part"><b>maximus.</b></span> <span class="vertical-part"><b>Nullam</b></span> <span class="vertical-part"><b>quis</b></span> <span class="vertical-part"><b>leo</b></span> <span class="vertical-part"><b>ipsum.</b></span> <span class="vertical-part"><b>Lorem</b></span> <span class="vertical-part"><b>ipsum</b></span> <span class="vertical-part"><b>Nam</b></span> <span class="vertical-part"><b>consectetur</b></span> <span class="vertical-part"><b>malesuada</b></span> <span class="vertical-part"><b>blandit.</b></span> <span class="vertical-part"><b>Mauris</b></span> <span class="vertical-part"><b>vulputate</b></span> <span class="vertical-part"><b>purus</b></span> <span class="vertical-part"><b>id</b></span> <span class="vertical-part"><b>dolor</b></span> <span class="vertical-part"><b>euismod</b></span> <span class="vertical-part"><b>varius.</b></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-image-container"><img class="item-image" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/a1232e48702241.589f548dc6bee.jpg"></div><!-- Staggered Header Elements -->
+                        <div class="item-header">
+                            <span class="vertical-part"><b>S</b></span> <span class="vertical-part"><b>p</b></span> <span class="vertical-part"><b>o</b></span> <span class="vertical-part"><b>t</b></span> <span class="vertical-part"><b>i</b></span> <span class="vertical-part"><b>f</b></span> <span class="vertical-part"><b>y</b></span>
+                        </div><!-- Staggered Description Elements -->
+                        <div class="item-description">
+                            <span class="vertical-part"><b>Spotify</b></span> <span class="vertical-part"><b>ipsum</b></span> <span class="vertical-part"><b>dolor</b></span> <span class="vertical-part"><b>sit</b></span> <span class="vertical-part"><b>amet,</b></span> <span class="vertical-part"><b>consectetur</b></span> <span class="vertical-part"><b>adipiscing</b></span> <span class="vertical-part"><b>elit.</b></span> <span class="vertical-part"><b>Pellentesque</b></span> <span class="vertical-part"><b>elementum</b></span> <span class="vertical-part"><b>gravida</b></span> <span class="vertical-part"><b>ex</b></span> <span class="vertical-part"><b>at</b></span> <span class="vertical-part"><b>maximus.</b></span> <span class="vertical-part"><b>Nullam</b></span> <span class="vertical-part"><b>quis</b></span> <span class="vertical-part"><b>leo</b></span> <span class="vertical-part"><b>ipsum.</b></span> <span class="vertical-part"><b>Lorem</b></span> <span class="vertical-part"><b>ipsum</b></span> <span class="vertical-part"><b>Nam</b></span> <span class="vertical-part"><b>consectetur</b></span> <span class="vertical-part"><b>malesuada</b></span> <span class="vertical-part"><b>blandit.</b></span> <span class="vertical-part"><b>Mauris</b></span> <span class="vertical-part"><b>vulputate</b></span> <span class="vertical-part"><b>purus</b></span> <span class="vertical-part"><b>id</b></span> <span class="vertical-part"><b>dolor</b></span> <span class="vertical-part"><b>euismod</b></span> <span class="vertical-part"><b>varius.</b></span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="item-image-container"><img class="item-image" src="https://i2.wp.com/www.futuristarchitecture.com/wp-content/uploads/2016/11/fantastic-small-living-room-interior-idea-7.jpg?w=700&ssl=1"></div><!-- Staggered Header Elements -->
+                        <div class="item-header">
+                            <span class="vertical-part"><b>A</b></span> <span class="vertical-part"><b>i</b></span> <span class="vertical-part"><b>r</b></span> <span class="vertical-part"><b>b</b></span> <span class="vertical-part"><b>n</b></span> <span class="vertical-part"><b>b</b></span>
+                        </div><!-- Staggered Description Elements -->
+                        <div class="item-description">
+                            <span class="vertical-part"><b>Airbnb</b></span> <span class="vertical-part"><b>ipsum</b></span> <span class="vertical-part"><b>dolor</b></span> <span class="vertical-part"><b>sit</b></span> <span class="vertical-part"><b>amet,</b></span> <span class="vertical-part"><b>consectetur</b></span> <span class="vertical-part"><b>adipiscing</b></span> <span class="vertical-part"><b>elit.</b></span> <span class="vertical-part"><b>Pellentesque</b></span> <span class="vertical-part"><b>elementum</b></span> <span class="vertical-part"><b>gravida</b></span> <span class="vertical-part"><b>ex</b></span> <span class="vertical-part"><b>at</b></span> <span class="vertical-part"><b>maximus.</b></span> <span class="vertical-part"><b>Nullam</b></span> <span class="vertical-part"><b>quis</b></span> <span class="vertical-part"><b>leo</b></span> <span class="vertical-part"><b>ipsum.</b></span> <span class="vertical-part"><b>Lorem</b></span> <span class="vertical-part"><b>ipsum</b></span> <span class="vertical-part"><b>Nam</b></span> <span class="vertical-part"><b>consectetur</b></span> <span class="vertical-part"><b>malesuada</b></span> <span class="vertical-part"><b>blandit.</b></span> <span class="vertical-part"><b>Mauris</b></span> <span class="vertical-part"><b>vulputate</b></span> <span class="vertical-part"><b>purus</b></span> <span class="vertical-part"><b>id</b></span> <span class="vertical-part"><b>dolor</b></span> <span class="vertical-part"><b>euismod</b></span> <span class="vertical-part"><b>varius.</b></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <ul>
+                        <li class="control" data-index="0"></li>
+                        <li class="control" data-index="1"></li>
+                        <li class="control" data-index="2"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+        <!-- Custom scripts for this template -->
+        <script src="js/barba.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+       <!-- <script src="js/app.js"></script>-->
+        <script src="js/slider.js"></script>
+        <script src="js/new-age.min.js"></script>
+    </div>
+</div>
+<div class="curtain curtain-top"></div>
+<div class="curtain curtain-bottom"></div>
+</body>
+
+</html>
