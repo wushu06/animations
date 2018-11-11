@@ -9,6 +9,7 @@
 <script src="js/barba.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <script src="js/app.js"></script>
+<script src="dist/bundle.js"></script>
 <!--<script src="js/new-age.min.js"></script>
 -->
 

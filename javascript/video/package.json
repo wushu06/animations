@@ -1,5 +1,5 @@
 {
-  "name": "mine",
+  "name": "organising-js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "barba.js": "^1.0.0"
+  "dependencies": {
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0"
   }
 }

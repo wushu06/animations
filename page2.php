@@ -1,6 +1,6 @@
 
 <?php include 'elements/header.php' ?>
-        <div id="wrapper">
+        <div id="wrapper" >
             <section class="slideshow" id="js-header">
 
                 <div class="slideshow__slide js-slider-home-slide is-current" data-slide="1">

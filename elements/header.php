@@ -31,7 +31,7 @@
 
 </head>
 
-<body id="page-top" style="height: 100vh; overflow: hidden">
+<body class="page-wrapper" id="page-top" style="height: 100vh; overflow: hidden">
 <div id="barba-wrapper">
     <div class="barba-container">
 

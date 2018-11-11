@@ -1,6 +1,6 @@
 
 <?php include 'elements/header.php' ?>
-        <div class="content-width" id="sliderCheck">
+        <div class="content-width" id="slider3">
             <div class="slideshow">
                 <!-- Slideshow Items -->
                 <div class="slideshow-items">

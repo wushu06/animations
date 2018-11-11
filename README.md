@@ -2,7 +2,8 @@
 
 using jquery and css to create animations
 
-#Main plugins
+# Main plugins
+
 Barbajs
 
 TweenMax

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Organising JS</title>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #000000;
+        }
+        .sBox {
+            width: 500px;
+            height: 100px;
+            margin-top: 200px;
+            background: green;
+        }
+
+        .d-none {
+            display: none;
+        }
+    </style>
+</head>
+<body id="body">
+<h1>Organising JS</h1>
+
+<div class="your-class">
+    <div>your content</div>
+    <div>your content</div>
+    <div>your content</div>
+</div>
+
+<div class="hello"></div>
+
+<button class="js-show-box">Show box</button>
+
+<div class="box d-none"></div>
+<div class="sBox d-none"></div>
+
+
+<script src="dist/bundle.js"></script>
+</body>
+</html>
